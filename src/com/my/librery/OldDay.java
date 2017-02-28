@@ -8,7 +8,7 @@ public class OldDay {
             @Override
             public void run() {
                 for (int i = 0; i < 10; i++) {
-                    doSmt("T1");
+                    //doSmt("T1");
                 }
             }
         });
@@ -41,14 +41,14 @@ public class OldDay {
 
     Object locker = new Object();
 
-    public void doSmt(String info) {
-        synchronized (locker) {
-            System.out.println("doSmt begin " + info + " " + Thread.currentThread().getName());
-            try {
-                locker.wait();
-            } catch (InterruptedException e) {
-            }
-            System.out.println("doSmt end " + info + " " + Thread.currentThread().getName());
-        }
-    }
+//    public void doSmt(String info) {
+//        synchronized (locker) {
+//            System.out.println("doSmt begin " + info + " " + Thread.currentThread().getName());
+//            try {
+//                locker.wait();
+//            } catch (InterruptedException e) {
+//            }
+//            System.out.println("doSmt end " + info + " " + Thread.currentThread().getName());
+//        }
+//    }
 }
